@@ -1,1 +1,99 @@
+Given an array, find the largest element in it.
+Example:
+arr = [3, 7, 2, 9, 5]
+Output: 9
+
+let arr = [3, 7, 2, 9, 5];
+let largest = arr[0];   // assume first element is largest
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        largest = arr[i];
+    }
+}
+console.log("Largest element is:", largest);
+
+Time Complexity: O(n) → one loop
+Space Complexity: O(1) → no extra space
+...............................................................................................
+Given an array, find the smallest element.
+
+Example:
+arr = [4, 2, 9, 1, 6]
+Output: 1
+
+let arr = [4, 2, 9, 1, 6];
+
+let smallest = arr[0];   // assume first element is smallest
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+        smallest = arr[i];
+    }
+}
+
+console.log("Smallest element is:", smallest);
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+..............................................................................................
+Given an array of numbers, print all elements that are a power of 7.
+
+Example
+Input:  [1, 7, 49, 50, 343, 10]
+Output: 7 49 343
+
+// Array of numbers
+let arr = [1, 7, 49, 50, 343, 10];
+
+// Loop through each element of the array
+for (let i = 0; i < arr.length; i++) {
+
+    // Take the current array element
+    let num = arr[i];
+
+    // If the number is less than 7,
+    // it cannot be a power of 7, so skip it
+    if (num < 7) {
+        continue; // move to the next element
+    }
+
+    // Keep dividing the number by 7
+    // as long as it is perfectly divisible by 7
+    while (num % 7 === 0) {
+        num = num / 7; // reduce the number
+    }
+
+    // After removing all factors of 7,
+    // if the number becomes 1,
+    // then the original number was a power of 7
+    if (num === 1) {
+        console.log(arr[i]);  // print the original number
+    }
+}
+Time Complexity: O(n log n)
+Because we traverse the array once, and for each element we may divide it by 7 multiple times, which takes logarithmic time.
+Space Complexity
+O(1)
+Only one extra variable (num) is used.
+.....................................................................................................................................
+Write a program to print the next 5 leap years after 1985.
+
+let year = 1986;   // 1985 ke baad se start
+let count = 0;    // leap years count karne ke liye
+
+while (count < 5) {
+
+    // leap year condition
+    if (
+        (year % 4 === 0 && year % 100 !== 0) ||
+        (year % 400 === 0)
+    ) {
+        console.log(year); // leap year print karo
+        count++;           // count badhao
+    }
+
+    year++; // next year par jao
+}
+
+
 
