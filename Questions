@@ -70,7 +70,7 @@ for (let i = 0; i < arr.length; i++) {
         console.log(arr[i]);  // print the original number
     }
 }
-Time Complexity: O(n log n)
+Time Complexity: O(n log n) why 
 Because we traverse the array once, and for each element we may divide it by 7 multiple times, which takes logarithmic time.
 Space Complexity
 O(1)
