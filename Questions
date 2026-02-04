@@ -95,6 +95,96 @@ while (count < 5) {
     year++; // next year par jao
 }
 ......................................................................................
+Second Largest Element in an Array without sorting?
+[3, 7, 2, 9, 5]
+Output: 7
+Explanation:
+Largest = 9
+Second Largest = 7
+
+Solution:
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        secondLargest = largest;
+        largest = arr[i];
+    } 
+    else if (arr[i] > secondLargest && arr[i] !== largest) {
+        secondLargest = arr[i];
+    }
+}
+
+
+
+
+Dry Run 
+[5, 9, 9, 3]
+And focus ONLY on this line:
+
+else if (arr[i] > secondLargest && arr[i] !== largest)
+🎯 Goal
+Find:
+
+ Largest
+ Second Largest
+
+✅ Start
+largest = -∞
+secondLargest = -∞
+🔹 Step 1 → First number = 5
+5 > -∞ ✅
+So:
+
+largest = 5
+secondLargest = -∞
+🔹 Step 2 → Next number = 9
+9 > 5 ✅
+So:
+
+secondLargest = 5
+largest = 9
+Now:
+
+largest = 9
+secondLargest = 5
+🔹 Step 3 → Next number = 9 (duplicate!)
+Check first if:
+
+9 > 9 ❌
+Now comes your confusing part:
+
+else if (arr[i] > secondLargest && arr[i] !== largest)
+Let’s check slowly:
+
+👉 arr[i] > secondLargest ?
+9 > 5 ✅
+👉 arr[i] !== largest ?
+9 !== 9 ❌
+Because both are 9.
+
+So:
+
+TRUE && FALSE = FALSE
+Nothing happens.
+
+👉 secondLargest stays 5.
+
+❓ Why?
+Because second largest CANNOT be same as largest.
+
+🔹 Step 4 → Next number = 3
+Check:
+
+3 > 9 ❌
+3 > 5 ❌
+Ignore.
+
+✅ Final Answer
+largest = 9
+secondLargest = 5
+......................................................................................................................................
 
 
 
