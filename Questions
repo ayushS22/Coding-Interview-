@@ -185,6 +185,101 @@ Ignore.
 largest = 9
 secondLargest = 5
 ......................................................................................................................................
+Check whether the given array is sorted in ascending order.
+input
+5
+1 2 3 4 5
+Output : true
+input
+4
+1 3 2 4
+Output : false
+
+function isSorted(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Example
+let arr = [1, 2, 3, 4, 5];
+console.log(isSorted(arr)); // true
+Space Complexity: O(1)
+
+No extra memory used.
+
+Only a loop variable.
+.............................................................................................................................
+Remove Duplicates from Sorted Array
+input: [1, 1, 2, 2, 3, 4, 4]
+output : [1, 2, 3, 4]
+
+function removeDuplicatesBrute(arr) {
+
+  // Create an empty array to store unique elements
+  let result = [];
+
+  // Loop through each element of the input array
+  for (let i = 0; i < arr.length; i++) {
+
+    // If this is the first element (i === 0)
+    // OR current element is different from the previous element
+    // then it means this value is unique
+    if (i === 0 || arr[i] !== arr[i - 1]) {
+
+      // Add the unique element to result array
+      result.push(arr[i]);
+    }
+  }
+
+  // Return the array containing only unique values
+  return result;
+}
+
+// Example input
+console.log(removeDuplicatesBrute([1,1,2,2,3,4,4]));
+Complexity (Brute Force)
+
+Time: O(n)
+
+Space: O(n) ❌ (extra array)
+
+
+
+.......OPTIMAL.....
+function removeDuplicates(arr) {
+
+  let i = 0;
+
+  for (let j = 1; j < arr.length; j++) {
+
+    if (arr[j] !== arr[i]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+
+  // return number of unique elements
+  return i + 1;
+}
+
+// Example
+let nums = [1, 1, 2, 2, 3, 4, 4];
+
+let k = removeDuplicates(nums);
+
+// Print only unique elements
+for (let i = 0; i < k; i++) {
+  console.log(nums[i]);
+}
+Time Complexity: O(n)
+Space Complexity: O(1)
+The time complexity is O(n) since we traverse the array once, and the space complexity is O(1) because we modify the array in place without using extra memory.
+
+
 
 
 
