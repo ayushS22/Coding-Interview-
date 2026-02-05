@@ -307,6 +307,31 @@ Space Complexity: O(1)
 
 ..........optimal solution ......
 
+function findMissingOptimal(arr, n) {
+
+  // Sum of numbers from 1 to n using formula
+  let expectedSum = (n * (n + 1)) / 2;
+
+  // Will store sum of array elements
+  let actualSum = 0;
+
+  // Add all array values
+  for (let i = 0; i < arr.length; i++) {
+    actualSum += arr[i];
+  }
+
+  // Missing number = Expected Sum - Actual Sum
+  return expectedSum - actualSum;
+}
+
+// Example
+console.log(findMissingOptimal([1,2,4,5], 5)); // 3
+
+Complexity
+Time:O(n)
+Space:O(1)
+.................................................................................................................
+
 
 
 
