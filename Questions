@@ -278,6 +278,35 @@ for (let i = 0; i < k; i++) {
 Time Complexity: O(n)
 Space Complexity: O(1)
 The time complexity is O(n) since we traverse the array once, and the space complexity is O(1) because we modify the array in place without using extra memory.
+............................................................................................................................................................................................
+Find missing number in an array
+arr = [1,2,4,5]   // n = 5 → missing = 3
+
+bruteforce approach
+
+function findMissingBrute(arr, n) {
+  for (let i = 1; i <= n; i++) {
+    let found = false;
+
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] === i) {
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) return i;
+  }
+}
+
+// Example
+console.log(findMissingBrute([1,2,4,5], 5)); // 3
+Time Complexity: O(n²)
+Space Complexity: O(1)
+
+
+..........optimal solution ......
+
 
 
 
