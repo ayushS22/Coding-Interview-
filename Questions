@@ -324,7 +324,7 @@ function findMissingOptimal(arr, n) {
   return expectedSum - actualSum;
 }
 
-// Example
+// Example here
 console.log(findMissingOptimal([1,2,4,5], 5)); // 3
 
 Complexity
