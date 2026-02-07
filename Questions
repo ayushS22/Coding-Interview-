@@ -331,6 +331,33 @@ Complexity
 Time:O(n)
 Space:O(1)
 .................................................................................................................
+Left Rotate Array by One
+Input: [1, 2, 3, 4, 5]
+Output: [2, 3, 4, 5, 1]
+Move the first element to the end, and shift all other elements one position to the left.
+
+function leftRotateByOne(arr) {
+  if (arr.length === 0) return arr;
+
+  let first = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    arr[i - 1] = arr[i];
+  }
+
+  arr[arr.length - 1] = first;
+  return arr;
+}
+
+// Example
+console.log(leftRotateByOne([1, 2, 3, 4, 5]));
+
+Time Complexity:  O(n)
+Because we shift every element once (loop runs through the whole array).
+
+Space Complexity:  O(1)
+No extra array is used — rotation is done in-place.
+.......................................................................................................
 
 
 
