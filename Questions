@@ -1,4 +1,4 @@
-Given an array, find the largest element in it.
+Given an array, find the largest element .
 Example:
 arr = [3, 7, 2, 9, 5]
 Output: 9
