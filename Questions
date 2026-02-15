@@ -78,7 +78,7 @@ Only one extra variable (num) is used.
 .....................................................................................................................................
 Write a program to print the next 5 leap years after 1985.
 
-let year = 1986;   // 1985 ke baad se start
+let year = 1986;   // 1985 ke baad se start karo
 let count = 0;    // leap years count karne ke liye
 
 while (count < 5) {
