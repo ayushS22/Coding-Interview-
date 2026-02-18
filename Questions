@@ -12,7 +12,7 @@ for (let i = 1; i < arr.length; i++) {
 }
 console.log("Largest element is:", largest);
 
-Time Complexity: O(n) → one loop
+Time Complexity: O(n) → one loop used
 Space Complexity: O(1) → no extra space therefore O(1)
 ...............................................................................................
 Given an array, find the smallest element.
