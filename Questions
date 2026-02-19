@@ -320,7 +320,7 @@ function findMissingOptimal(arr, n) {
     actualSum += arr[i];
   }
 
-  // Missing number = Expected Sum - Actual Sum
+  // Missing number = Expected Sum - Actual Sum ,this is a logic
   return expectedSum - actualSum;
 }
 
