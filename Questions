@@ -249,7 +249,7 @@ Space: O(n) ❌ (extra array)
 
 
 
-.......OPTIMAL.....
+.......OPTIMAL WAY .....
 function removeDuplicates(arr) {
 
   let i = 0;
